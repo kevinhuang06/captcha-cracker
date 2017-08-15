@@ -1,0 +1,23 @@
+# The train/test net protocol buffer definition
+net: "validnet_train_test.prototxt"
+test_iter: 3000
+# Carry out testing every 500 training iterations.
+test_interval: 1000
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.0005
+momentum: 0.971
+weight_decay: 0.0005
+# The learning rate policy
+lr_policy: "inv"
+gamma: 0.0001
+power: 0.75
+# Display every 100 iterations
+display: 500
+# The maximum number of iterations
+max_iter: 32000
+# snapshot intermediate results
+snapshot: 1000
+snapshot_prefix: "model/PROJECT"
+# solver mode: CPU or GPU
+solver_mode: GPU
+device_id: 0
